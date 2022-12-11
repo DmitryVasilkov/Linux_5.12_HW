@@ -1,0 +1,17 @@
+nano taskDima.sh
+
+#!/bin/bash
+for run in {1..10} 
+do
+DATE=$(date +"%H_%M_%S")
+echo $run
+echo $DATE
+touch $run'_'$DATE
+done
+
+
+
+
+crontab -e
+
+*/15 * * * * /opt/43_44_morning/vasylkov/taskDima.sh
